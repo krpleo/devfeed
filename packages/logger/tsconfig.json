@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {},
+  "exclude": ["node_modules"],
+  "extends": "@devfeed/tsconfig/internal-package.json",
+  "include": ["*.ts", "src"]
+}
