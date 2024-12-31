@@ -3,8 +3,12 @@ name: Analysis / Jest Tests
 on:
   pull_request:
     branches: ["*"]
+    paths:
+      - "**/*.test.*"
   push:
     branches: ["main"]
+    paths:
+      - "**/*.test.*"
   merge_group:
 
 concurrency:
