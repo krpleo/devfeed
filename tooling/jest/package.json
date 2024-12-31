@@ -1,5 +1,17 @@
 {
   "name": "@devfeed/jest-presets",
   "private": true,
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "files": [
+    "browser/jest-preset.ts",
+    "node/jest-preset.ts"
+  ],
+  "dependencies": {
+    "jest": "catalog:jest",
+    "ts-jest": "catalog:jest"
+  },
+  "devDependencies": {
+    "jest-environment-jsdom": "catalog:jest",
+    "ts-node": "^10.9.2"
+  }
 }
