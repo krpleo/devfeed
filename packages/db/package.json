@@ -3,22 +3,43 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "default": "./src/client.ts"
+    },
+    "./schema": {
+      "types": "./dist/schema.d.ts",
+      "default": "./src/schema.ts"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
     "dev": "tsc",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "push": "pnpm drizzle-kit push",
+    "studio": "pnpm drizzle-kit studio"
+  },
+  "dependencies": {
+    "@devfeed/env": "workspace:*",
+    "@vercel/postgres": "^0.10.0",
+    "drizzle-orm": "^0.36.4",
+    "drizzle-zod": "^0.5.1",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@devfeed/eslint-config": "workspace:*",
     "@devfeed/prettier-config": "workspace:*",
     "@devfeed/tsconfig": "workspace:*",
+    "drizzle-kit": "^0.28.1",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
