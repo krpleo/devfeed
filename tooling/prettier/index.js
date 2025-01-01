@@ -4,6 +4,9 @@
 /** @type { PrettierConfig | SortImportsConfig } */
 const config = {
   plugins: ["@ianvs/prettier-plugin-sort-imports"],
+  semi: false,
+  tabWidth: 2,
+  printWidth: 100,
   importOrder: [
     "<TYPES>",
     "^(react/(.*)$)|^(react$)|^(react-native(.*)$)",
@@ -34,6 +37,6 @@ const config = {
       },
     },
   ],
-};
+}
 
-export default config;
+export default config

@@ -7,8 +7,7 @@ Closes #ISSUE_NUMBER
 
 ### Changes Made
 <!-- Please include a list of changes made. -->
-- [ ] Change 1
-- [ ] Change 2
+- [ ] Added a description to the PR
 
 ### Screenshots (if applicable)
 <!-- Please include screenshots/videos of the changes made. -->
