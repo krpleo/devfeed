@@ -36,7 +36,7 @@
       "cache": false
     }
   },
-  "globalEnv": ["DATABASE_URL", "PULSE_API_KEY", "PORT"],
+  "globalEnv": ["DATABASE_URL"],
   "globalPassThroughEnv": [
     "NODE_ENV",
     "CI",

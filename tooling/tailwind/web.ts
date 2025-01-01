@@ -1,7 +1,7 @@
-import type { Config } from "tailwindcss";
-import animate from "tailwindcss-animate";
+import type { Config } from "tailwindcss"
+import animate from "tailwindcss-animate"
 
-import base from "./base";
+import base from "./base"
 
 export default {
   content: base.content,
@@ -23,10 +23,14 @@ export default {
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
           to: { height: "0" },
         },
       },
@@ -37,4 +41,4 @@ export default {
     },
   },
   plugins: [animate],
-} satisfies Config;
+} satisfies Config

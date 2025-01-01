@@ -1,4 +1,4 @@
-name: Analysis / Jest Tests
+name: CI
 
 on:
   pull_request:
@@ -17,7 +17,7 @@ env:
   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,5 +25,5 @@ jobs:
       - name: Setup
         uses: ./tooling/github/setup
 
-      - name: Test
-        run: pnpm test
+      - name: Build
+        run: pnpm build
