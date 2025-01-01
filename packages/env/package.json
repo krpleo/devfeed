@@ -1,0 +1,31 @@
+{
+  "name": "@devfeed/env",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/env.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsc",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "^0.11.1",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@devfeed/eslint-config": "workspace:*",
+    "@devfeed/prettier-config": "workspace:*",
+    "@devfeed/tsconfig": "workspace:*",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  },
+  "prettier": "@devfeed/prettier-config"
+}
