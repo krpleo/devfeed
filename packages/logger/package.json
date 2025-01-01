@@ -4,11 +4,12 @@
   "version": "0.1.0",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/logger.ts"
   },
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "test": "jest",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
     "dev": "tsc",
     "format": "prettier --check . --ignore-path ../../.gitignore",
@@ -19,9 +20,15 @@
     "@devfeed/eslint-config": "workspace:*",
     "@devfeed/prettier-config": "workspace:*",
     "@devfeed/tsconfig": "workspace:*",
+    "@jest/globals": "catalog:jest",
+    "@types/jest": "catalog:jest",
     "eslint": "catalog:",
+    "jest": "catalog:jest",
     "prettier": "catalog:",
     "typescript": "catalog:"
   },
-  "prettier": "@devfeed/prettier-config"
+  "prettier": "@devfeed/prettier-config",
+  "jest": {
+    "preset": "ts-jest"
+  }
 }

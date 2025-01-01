@@ -1,4 +1,4 @@
-const checkLength = (num: number) =>
+export const checkLength = (num: number) =>
   String(num).length === 1 ? `0${num}` : `${num}`;
 
 export const getTime = () => {
